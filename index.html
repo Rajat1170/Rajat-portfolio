@@ -552,11 +552,12 @@ Data Analytics Projects & Dashboard Work
     <div class="p-5">
 
         <h3 class="text-xl font-bold">
-            Interactive Sales Analysis Dashboard
+             
+             Business Performance
         </h3>
 
         <p class="text-gray-400 mt-2">
-            Chocolate Business Performance Dashboard.
+            E-Commerce Analytics Dashboard
         </p>
 
         <div class="mt-4 flex gap-2 flex-wrap">
@@ -566,7 +567,7 @@ Data Analytics Projects & Dashboard Work
             </span>
 
             <span class="bg-green-400 px-3 py-1 rounded-full text-black">
-                Excel
+                Power Query
             </span>
 
         </div>
@@ -578,7 +579,25 @@ Data Analytics Projects & Dashboard Work
             </summary>
 
             <p class="mt-3">
-                This project shows a Chocolate Business Dashboard made with Excel and Power BI. Data was first cleaned and organized in Excel, then imported into Power BI for visuals. The dashboard highlights sales, shipments, product performance, and salesperson activity. Together, Excel and Power BI make business results easy to understand and support better decision-making.
+              📊 Power BI E-Commerce Analytics Dashboard
+ Built an end-to-end business intelligence dashboard featuring six interactive report pages that help stakeholders monitor KPIs, uncover trends, and make smarter business decisions.
+1. Business Performance at a Glance:  
+- Provides a comprehensive overview of key business KPIs, sales trends, customer insights, and product performance to support strategic decision-making.
+
+2. Understanding Customer Behavior:
+-  Analyzes customer demographics, segments, membership, and purchasing patterns to identify valuable customers and growth opportunities.
+
+3. Driving Product Success:
+-  Evaluates product categories, brands, pricing, discounts, and sales performance to identify top-performing products and optimize inventory.
+
+4. Optimizing Delivery Performance:
+- Monitors shipping costs, delivery time, warehouse efficiency, and order fulfillment to improve operational performance.
+
+5. Measuring Financial Health:
+-  Tracks revenue, profit, margins, taxes, and discounts to evaluate overall financial performance and profitability.
+
+6. Enhancing Customer Engagement:
+-  Examines marketing channels, customer feedback, coupon usage, and seasonal trends to improve customer experience and business growth.
             </p>
 
         </details>
@@ -637,8 +656,6 @@ document.getElementById("imageModal").addEventListener("click", function(e){
 });
 
 </script>
-
-<!-- Project 1 -->
 
 <!-- Project 1 -->
 
@@ -721,6 +738,10 @@ document.getElementById("imageModal").addEventListener("click", function(e) {
 });
 </script>
 
+
+
+
+<!-- Project 2 -->
 
 <!-- Project 2 -->
 
@@ -811,78 +832,98 @@ document.getElementById("imageModal").addEventListener("click", function(e) {
 
 
 
-    
-
-
-
-
-
-
 
 
 
 
 <!-- Project 3 -->
 
-<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg
-hover:scale-105 transition">
-
-
-<img src="PBI2.png"
-class="w-full h-auto object-cover"
-alt="Finance Dashboard">
-
-
-<div class="p-5">
-
-
-<h3 class="text-xl font-bold">
-Financial performance visualization.
-</h3>
-
-
-<p class="text-gray-400 mt-2">
-Chocolate Business Dashboard
-</p>
 
 
 
-<div class="mt-4 flex gap-2">
+<!-- Project Card -->
+<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
-<span class="bg-cyan-500 px-3 py-1 rounded-full text-sm">
-Power BI
-</span>
+    <!-- Single Image -->
+    <img src="PBI2.png"
+         onclick="openImage(this.src)"
+         class="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300"
+         alt="Sales Dashboard">
 
-<span class="bg-green-500 text-black px-3 py-1 rounded-full text-sm">
-Excel
-</span>
+    <!-- Card Content -->
+    <div class="p-5">
 
-</div>
+        <h3 class="text-xl font-bold">
+            Financial performance visualization.
+        </h3>
 
+        <p class="text-gray-400 mt-2">
+           Chocolate Business Dashboard
+        </p>
 
+        <div class="mt-4 flex gap-2 flex-wrap">
+            <span class="bg-cyan-500 px-3 py-1 rounded-full text-black">
+                Power BI
+            </span>
 
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Excel
+            </span>
+            
+        </div>
 
-<details class="mt-5 text-gray-300">
+        <details class="mt-5 text-gray-300">
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
 
-
-<summary class="cursor-pointer  text-white">
-View Details
-</summary>
-
-
-<p class="mt-3">
-This project uses Excel to prepare and clean sales data, then imports it into Power BI for visualization.
+            <p class="mt-3">
+                This project uses Excel to prepare and clean sales data, then imports it into Power BI for visualization.
 The dashboard shows revenue, shipments, product sales, monthly country trends, and salesperson performance with interactive charts.
 Together, Excel manages the data and Power BI provides clear insights for better business decisions.
-</p>
 
-
-</details>
-
+    </div>
 
 </div>
 
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+
+    <!-- Close Button -->
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
+
+    <!-- Fullscreen Image -->
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
+
 </div>
+
+<script>
+function openImage(src) {
+    document.getElementById("fullImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+}
+
+function closeImage() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+}
+
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
+</script>
+
+
+
+
 
 
 
@@ -894,133 +935,178 @@ Together, Excel manages the data and Power BI provides clear insights for better
 
 <!-- Project 4 Python -->
 
-<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg
-hover:scale-105 transition">
+<!-- Project Card -->
+<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
+    <!-- Single Image -->
+    <img src="Excel1.png"
+         onclick="openImage(this.src)"
+         class="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300"
+         alt="Sales Dashboard">
 
-<img src="Excel1.png"
-class="w-full h-auto object-cover"
-alt="Python Project">
+    <!-- Card Content -->
+    <div class="p-5">
 
+        <h3 class="text-xl font-bold">
+            Data Analysis Using Excel
+        </h3>
 
-<div class="p-5">
+        <p class="text-gray-400 mt-2">
+          Coffee Shop Sale Dashboard
+        </p>
 
+        <div class="mt-4 flex gap-2 flex-wrap">
+            <span class="bg-cyan-500 px-3 py-1 rounded-full text-black">
+                Excel Query
+            </span>
 
-<h3 class="text-xl font-bold">
-Data Analysis Using Excel
-</h3>
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Excel
+            </span>
+            
+        </div>
 
+        <details class="mt-5 text-gray-300">
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
 
-<p class="text-gray-400 mt-2">
-Coffee Shop Sale Dashboard
-</p>
-
-
-
-
-<div class="mt-4 flex gap-2">
-
-<span class="bg-green-500 px-3 py-1 rounded-full text-sm font-bold">
-Excel
-</span>
-
-<span class="bg-purple-500 px-3 py-1 rounded-full text-black font-bold">
-Excel Query
-</span>
-
-</div>
-
-<details class="mt-5 text-gray-300">
-
-
-<summary class="cursor-pointer  text-white">
-View Details
-</summary>
-
-
-<p class="mt-3">
-This dashboard shows coffee shop performance using Excel and Excel Query for data preparation. 
+            <p class="mt-3">
+                This dashboard shows coffee shop performance using Excel and Excel Query for data preparation. 
 It highlights total sales, footfall, average bill per person, and order trends by time of day. Charts display product income, store location sales, drink sizes, and weekday orders. 
 Excel Query helps clean and combine data, while Excel visuals make the results easy to understand.
-</p>
 
-
-</details>
-
-
+    </div>
 
 </div>
 
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+
+    <!-- Close Button -->
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
+
+    <!-- Fullscreen Image -->
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
+
 </div>
+
+<script>
+function openImage(src) {
+    document.getElementById("fullImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+}
+
+function closeImage() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+}
+
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Project 5 Python -->
+<!-- Project Card -->
+<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
-<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg
-hover:scale-105 transition">
+    <!-- Single Image -->
+    <img src="Excel2.png"
+         onclick="openImage(this.src)"
+         class="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300"
+         alt="Sales Dashboard">
 
+    <!-- Card Content -->
+    <div class="p-5">
 
+        <h3 class="text-xl font-bold">
+            Financial performance visualization.
+        </h3>
 
-<img src="Excel2.png"
-class="w-full h-auto object-cover"
-alt="Finance Dashboard">
+        <p class="text-gray-400 mt-2">
+          Vinda Store Annual Report 2026
+        </p>
 
+        <div class="mt-4 flex gap-2 flex-wrap">
+            <span class="bg-cyan-500 px-3 py-1 rounded-full text-black">
+                Excel Query
+            </span>
 
-<div class="p-5">
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Excel
+            </span>
+            
+        </div>
 
+        <details class="mt-5 text-gray-300">
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
 
-<h3 class="text-xl font-bold">
-Financial performance visualization.
-</h3>
-
-
-<p class="text-gray-400 mt-2">
-Vinda Store Annual Report 2026
-</p>
-
-
-
-<div class="mt-4 flex gap-2">
-
-<span class="bg-green-500 px-3 py-1 rounded-full text-sm font-bold">
-Excel
-</span>
-
-<span class="bg-purple-500 px-3 py-1 rounded-full text-black font-bold">
-Excel Query
-</span>
-
-</div>
-
-
-
-
-<details class="mt-5 text-gray-300">
-
-
-<summary class="cursor-pointer  text-white">
-View Details
-</summary>
-
-
-<p class="mt-3">
-This dashboard uses Excel and Excel Query to analyze yearly store performance. It shows monthly sales, order counts, top sales channels, and customer details by age and gender. 
+            <p class="mt-3">
+                This dashboard uses Excel and Excel Query to analyze yearly store performance. It shows monthly sales, order counts, top sales channels, and customer details by age and gender. 
 Pie and bar charts compare men vs women sales, delivery status, and top-performing states. 
 Excel Query manages large datasets, and Excel charts turn them into clear insights for business decisions.
-</p>
 
-
-</details>
-
+    </div>
 
 </div>
 
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+
+    <!-- Close Button -->
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
+
+    <!-- Fullscreen Image -->
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
+
 </div>
 
+<script>
+function openImage(src) {
+    document.getElementById("fullImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+}
 
+function closeImage() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+}
 
-
-
-</div>
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
+</script>
 
 
 </div>
