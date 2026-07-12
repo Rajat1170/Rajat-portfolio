@@ -640,97 +640,179 @@ document.getElementById("imageModal").addEventListener("click", function(e){
 
 <!-- Project 1 -->
 
+<!-- Project 1 -->
+
+<!-- Project Card -->
 <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
-<img src="PBI1.png"class="w-full h-auto object-cover" alt="Sales Dashboard">
 
-<div class="p-5">
-<h3 class="text-xl font-bold">Interactive sales analysis dashboard.</h3>
+    <!-- Single Image -->
+    <img src="PBI1.png"
+         onclick="openImage(this.src)"
+         class="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300"
+         alt="Sales Dashboard">
 
-<p class="text-gray-400 mt-2">Chocolate Business Performance Dashboard .</p>
+    <!-- Card Content -->
+    <div class="p-5">
 
-<div class="mt-4 flex gap-2">
+        <h3 class="text-xl font-bold">
+            Interactive Sales Analysis Dashboard
+        </h3>
 
-<span class="bg-cyan-500 px-3 py-1 rounded-full text-black">Power BI</span>
+        <p class="text-gray-400 mt-2">
+            Chocolate Business Performance Dashboard.
+        </p>
 
-<span class="bg-green-400 px-3 py-1 rounded-full text-black ">Excel</span>
+        <div class="mt-4 flex gap-2 flex-wrap">
+            <span class="bg-cyan-500 px-3 py-1 rounded-full text-black">
+                Power BI
+            </span>
+
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Excel
+            </span>
+        </div>
+
+        <details class="mt-5 text-gray-300">
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
+
+            <p class="mt-3">
+                This project shows a Chocolate Business Dashboard made with Excel and Power BI. Data was cleaned in Excel and visualized in Power BI to analyze sales, shipments, product performance, and salesperson activity.
+            </p>
+        </details>
+
+    </div>
 
 </div>
 
-<details class="mt-5 text-gray-300">
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
 
-<summary class="cursor-pointer  text-white">View Details</summary>
+    <!-- Close Button -->
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
 
-<p class="mt-3">This project shows a Chocolate Business Dashboard made with Excel and Power BI. Data was first cleaned and organized in Excel, then imported into Power BI for visuals. The dashboard highlights sales, shipments, product performance, and salesperson activity. Together, Excel and Power BI make the business results easy to track and improve decisions.</p>
+    <!-- Fullscreen Image -->
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
 
-</details>
 </div>
-</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("fullImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+}
+
+function closeImage() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+}
+
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
+</script>
+
 
 <!-- Project 2 -->
 
-<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg
-hover:scale-105 transition">
 
 
-<img src="Python1.png"
-class="w-full h-auto object-cover"
-alt="HR Dashboard">
+<!-- Project Card -->
+<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
+    <!-- Single Image -->
+    <img src="Python1.png"
+         onclick="openImage(this.src)"
+         class="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300"
+         alt="Sales Dashboard">
 
-<div class="p-5">
+    <!-- Card Content -->
+    <div class="p-5">
 
+        <h3 class="text-xl font-bold">
+            Data data Stor.
+        </h3>
 
-<h3 class="text-xl font-bold">
-Data data Stor.
-</h3>
+        <p class="text-gray-400 mt-2">
+           Student Registration System
+        </p>
 
+        <div class="mt-4 flex gap-2 flex-wrap">
+            <span class="bg-cyan-500 px-3 py-1 rounded-full text-black">
+                Python
+            </span>
 
-<p class="text-gray-400 mt-2">
-Student Registration System
-</p>
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Mysql
+            </span>
+            <span class="bg-white px-3 py-1 rounded-full text-black font-bold">
+                Tkinter
+            </span>
+        </div>
 
+        <details class="mt-5 text-gray-300">
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
 
-
-<div class="mt-4 flex gap-2">
-
-<span class="bg-blue-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-Python
-</span>
-
-<span class="bg-gray-200 px-3 py-1 rounded-full text-sm font-bold">
-MySQL
-</span>
-
-<span class="bg-white px-3 py-1 rounded-full text-black font-bold">
-Tkinter
-</span>
-
-</div>
-
-
-
-
-<details class="mt-5 text-gray-300">
-
-
-<summary class="cursor-pointer text-white">
-View Details
-</summary>
-
-
-<p class="mt-3">
-This project is a Student Management System built with Python, using Tkinter for the interface and MySQL for storing student records.
+            <p class="mt-3">
+                This project is a Student Management System built with Python, using Tkinter for the interface and MySQL for storing student records.
 It allows entering details like name, date of birth, gender, contact info, and course selection, with features to add, clear, upload images, and view records.
 Python manages the logic, Tkinter provides the form design, and MySQL ensures secure data storage and easy retrieval.
-</p>
 
-
-</details>
-
+    </div>
 
 </div>
 
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+
+    <!-- Close Button -->
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
+
+    <!-- Fullscreen Image -->
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
+
 </div>
+
+<script>
+function openImage(src) {
+    document.getElementById("fullImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+}
+
+function closeImage() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+}
+
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
+</script>
+
+
+
+
+    
+
 
 
 
