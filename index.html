@@ -515,32 +515,128 @@ Data Analytics Projects & Dashboard Work
 
 
 <!-- Project 0 -->
-    <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
-<img src="PBI1.png"class="w-full h-auto object-cover" alt="Sales Dashboard">
+ 
+<!-- Project Card -->
+<div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
-<div class="p-5">
-<h3 class="text-xl font-bold">Interactive sales analysis dashboard.</h3>
+    <!-- Multiple Images -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 p-2">
 
-<p class="text-gray-400 mt-2">Chocolate Business Performance Dashboard .</p>
+        <img src="" onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 1">
 
-<div class="mt-4 flex gap-2">
+        <img src="" onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 2">
 
-<span class="bg-cyan-500 px-3 py-1 rounded-full text-black">Power BI</span>
+        <img src="" onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 3">
 
-<span class="bg-green-400 px-3 py-1 rounded-full text-black ">Excel</span>
+        <img src="" onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 4">
+
+        <img src="" onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 5">
+
+        <img src="  " onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 6">
+
+    </div>
+
+    <!-- Card Content -->
+    <div class="p-5">
+
+        <h3 class="text-xl font-bold">
+            Interactive Sales Analysis Dashboard
+        </h3>
+
+        <p class="text-gray-400 mt-2">
+            Chocolate Business Performance Dashboard.
+        </p>
+
+        <div class="mt-4 flex gap-2 flex-wrap">
+
+            <span class="bg-cyan-500 px-3 py-1 rounded-full text-black">
+                Power BI
+            </span>
+
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Excel
+            </span>
+
+        </div>
+
+        <details class="mt-5 text-gray-300">
+
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
+
+            <p class="mt-3">
+                This project shows a Chocolate Business Dashboard made with Excel and Power BI. Data was first cleaned and organized in Excel, then imported into Power BI for visuals. The dashboard highlights sales, shipments, product performance, and salesperson activity. Together, Excel and Power BI make business results easy to understand and support better decision-making.
+            </p>
+
+        </details>
+
+    </div>
 
 </div>
 
-<details class="mt-5 text-gray-300">
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
 
-<summary class="cursor-pointer  text-white">View Details</summary>
+    <!-- Close Button -->
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
 
-<p class="mt-3">This project shows a Chocolate Business Dashboard made with Excel and Power BI. Data was first cleaned and organized in Excel, then imported into Power BI for visuals. The dashboard highlights sales, shipments, product performance, and salesperson activity. Together, Excel and Power BI make the business results easy to track and improve decisions.</p>
+    <!-- Fullscreen Image -->
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
 
-</details>
 </div>
-</div>
 
+<!-- JavaScript -->
+<script>
+
+function openImage(src) {
+
+    document.getElementById("fullImage").src = src;
+
+    document.getElementById("imageModal").classList.remove("hidden");
+
+    document.getElementById("imageModal").classList.add("flex");
+
+}
+
+function closeImage() {
+
+    document.getElementById("imageModal").classList.remove("flex");
+
+    document.getElementById("imageModal").classList.add("hidden");
+
+}
+
+// Close when clicking outside image
+
+document.getElementById("imageModal").addEventListener("click", function(e){
+
+    if(e.target === this){
+
+        closeImage();
+
+    }
+
+});
+
+</script>
 
 <!-- Project 1 -->
 
