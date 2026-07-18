@@ -513,10 +513,117 @@ Data Analytics Projects & Dashboard Work
 
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+<!-- Project 00 -->
+    <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
+    <!-- Three Images -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-2">
+
+        <img src="at_cleaning(1).png"
+            onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 1">
+
+        <img src="at_cleaning(12).png"
+            onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-300"
+            alt="Dashboard 2">
+
+        <img src="dat_cleaning(3).png"
+            onclick="openImage(this.src)"
+            class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition duration-30"
+            alt="Dashboard 3">
+
+    </div>
+
+    <!-- Card Content -->
+    <div class="p-5">
+
+        <h3 class="text-xl font-bold">
+            Data Cleaning 
+        </h3>
+
+        <p class="text-gray-400 mt-2">
+            Employee Data Cleaning 
+        </p>
+
+        <div class="mt-4 flex gap-2 flex-wrap">
+
+            <span class="bg-blue-500 px-3 py-1 rounded-full text-black">
+                Pyhton
+            </span>
+
+            <span class="bg-yellow-400 px-3 py-1 rounded-full text-black">
+                Pandas
+            </span>
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Numpy
+            </span>
+            <span class="bg-green-400 px-3 py-1 rounded-full text-black">
+                Excel
+            </span>
+
+        </div>
+
+        <details class="mt-5 text-gray-300">
+
+            <summary class="cursor-pointer text-white">
+                View Details
+            </summary>
+
+            <p class="mt-3">
+                Developed an Employee Data Cleaning & Analysis project using Python, Pandas, NumPy, and Microsoft Excel. Performed data understanding 
+                by analyzing data types, missing values, duplicates, and inconsistencies. 
+                Cleaned and transformed the dataset by handling missing values, treating outliers, standardizing text fields, validating records, 
+                and converting data types. Exported the cleaned dataset to Excel,
+                producing a structured and analysis-ready dataset suitable for reporting, visualization, and further data analysis.
+            </p>
+
+        </details>
+
+    </div>
+
+</div>
+
+<!-- Fullscreen Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
+
+    <span onclick="closeImage()"
+          class="absolute top-5 right-8 text-white text-5xl cursor-pointer hover:text-red-500">
+        &times;
+    </span>
+
+    <img id="fullImage"
+         class="max-w-[95%] max-h-[95%] rounded-lg shadow-2xl">
+
+</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("fullImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+}
+
+function closeImage() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+}
+
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
+</script>
+
+
+
+
+    
 <!-- Project 0 -->
  
-<!-- Project Card -->
 <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
 
     <!-- Multiple Images -->
@@ -656,6 +763,7 @@ document.getElementById("imageModal").addEventListener("click", function(e){
 });
 
 </script>
+    
 
 <!-- Project 1 -->
 
